@@ -62,7 +62,8 @@ class MainWindow(QMainWindow):
 
         self.centralwidget = QWidget()
         self.setCentralWidget(self.centralwidget)
-
+        
+        #Makes a push button for both scripts and makes size
         self.pushButton1 = QPushButton("American Sign", self.centralwidget)
         self.pushButton2 = QPushButton("Game", self.centralwidget)
         self.pushButton1.resize(20,30)
@@ -74,10 +75,15 @@ class MainWindow(QMainWindow):
         lay.addWidget(self.pushButton1)
         lay.addWidget(self.pushButton2)
     def click1(self):
+        #Displays message and runs script when first button is clicked
+        QMessageBox.about(self, "Warning!!", "Press esc key to exit ASL")   
         ASL()
     def click2(self):
+        #Displays message and runs script when second button is clicked
+        QMessageBox.about(self, "Warning!!", "Press esc key to exit Game")
         game()
 
+#Background image insertion
 stylesheet = """
     MainWindow {
         background-image: url("bg.jpg"); 
@@ -89,6 +95,8 @@ stylesheet = """
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyleSheet(stylesheet)
+    
+    #Makes window to display everything
     window = MainWindow()
     window.resize(1200, 900)
     window.show()
