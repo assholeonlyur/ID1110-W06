@@ -25,7 +25,7 @@ except ModuleNotFoundError:
             os.system("py -m pip install --user cvzone")
             os.system("py -m pip install --user mediapipe")
             os.system("py -m pip install --user numpy")
-            os.system("py -m pip install --user sklearn")
+            os.system("py -m pip install --user scikit-learn")
             os.system("py -m pip install --user PyQt5")
 
             #Import after installation
