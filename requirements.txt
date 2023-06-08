@@ -1,0 +1,13 @@
+python version 3.10
+
+Modules used (download required for Linux or MacOS):
+os
+pickle
+PyQt5
+cv2
+cvzone
+mediapipe
+sklearn
+numpy
+time
+random
